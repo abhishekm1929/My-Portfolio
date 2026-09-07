@@ -4,11 +4,11 @@ import { setCharTimeline, setAllTimeline } from "../../utils/GsapScroll";
 import { decryptFile } from "./decrypt";
 
 export const CHARACTER_COLORS = {
-  shirt: "#2563eb", // Stylish royal blue hoodie / shirt
-  pants: "#1e293b", // Dark slate / denim trousers
-  shoes: "#18181b", // Modern dark sneakers
-  soles: "#f8fafc", // White sneaker soles
-  skin: "#dfa887",  // Natural warm skin tone
+  shirt: "#2563eb", // Rich Royal Tech Blue T-shirt
+  pants: "#1e293b", // Deep slate / charcoal trousers
+  shoes: "#18181b", // Modern stealth dark sneakers
+  soles: "#f8fafc", // Clean white sneaker soles
+  skin: "#f2c4a8",  // Natural warm human skin tone
 };
 
 const applyCharacterColors = (character: THREE.Object3D) => {
@@ -16,7 +16,7 @@ const applyCharacterColors = (character: THREE.Object3D) => {
     name: string,
     color: string,
     roughness = 0.6,
-    metalness = 0.05
+    metalness = 0.0
   ) => {
     const mesh = character.getObjectByName(name) as THREE.Mesh | undefined;
     if (mesh && mesh.material) {
@@ -31,17 +31,21 @@ const applyCharacterColors = (character: THREE.Object3D) => {
     }
   };
 
-  // Clothes
-  applyMeshColor("BODY.SHIRT", CHARACTER_COLORS.shirt, 0.7, 0.05);
-  applyMeshColor("Pant", CHARACTER_COLORS.pants, 0.8, 0.05);
-  applyMeshColor("Shoe", CHARACTER_COLORS.shoes, 0.5, 0.1);
-  applyMeshColor("Sole", CHARACTER_COLORS.soles, 0.4, 0.0);
+  // T-Shirt (Matte cotton fabric)
+  applyMeshColor("BODY.SHIRT", CHARACTER_COLORS.shirt, 0.82, 0.0);
 
-  // Skin (face, neck, hands, ears)
-  applyMeshColor("Plane.007", CHARACTER_COLORS.skin, 0.6, 0.0);
-  applyMeshColor("Neck", CHARACTER_COLORS.skin, 0.6, 0.0);
-  applyMeshColor("Hand", CHARACTER_COLORS.skin, 0.6, 0.0);
-  applyMeshColor("Ear.001", CHARACTER_COLORS.skin, 0.6, 0.0);
+  // Trousers / Pants (Denim texture)
+  applyMeshColor("Pant", CHARACTER_COLORS.pants, 0.85, 0.02);
+
+  // Sneakers & Soles
+  applyMeshColor("Shoe", CHARACTER_COLORS.shoes, 0.45, 0.08);
+  applyMeshColor("Sole", CHARACTER_COLORS.soles, 0.35, 0.0);
+
+  // Human Skin (Face, Neck, Hands, Ears - soft natural skin diffusion)
+  applyMeshColor("Plane.007", CHARACTER_COLORS.skin, 0.6, 0.0); // Face & Head
+  applyMeshColor("Neck", CHARACTER_COLORS.skin, 0.6, 0.0);       // Neck
+  applyMeshColor("Hand", CHARACTER_COLORS.skin, 0.6, 0.0);       // Hands & Fingers
+  applyMeshColor("Ear.001", CHARACTER_COLORS.skin, 0.6, 0.0);    // Ears
 };
 
 const setCharacter = (
