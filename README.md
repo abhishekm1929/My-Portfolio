@@ -51,11 +51,6 @@ However:
 
 Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
 
----
-
-![Protfolio-Preview](https://kommodo.ai/i/HgWYHuenluWXNJKcqLFF)
-
----
 
 ## 📄 License
 
