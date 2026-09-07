@@ -53,7 +53,7 @@ Any usage, extraction, or redistribution of that avatar from my live website is 
 
 ---
 
-![Protfolio-Preview](https://imperial-aqua-fcvddgr3.edgeone.dev/)
+![Protfolio-Preview](https://kommodo.ai/i/HgWYHuenluWXNJKcqLFF)
 
 ---
 
