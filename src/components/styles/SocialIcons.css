@@ -1,0 +1,93 @@
+.icons-section {
+  position: fixed;
+  max-width: var(--cMaxWidth);
+  width: var(--cWidth);
+  bottom: 0;
+  z-index: 99;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.social-icons {
+  position: absolute;
+  left: 0;
+  bottom: 24px;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 999;
+  padding: 0;
+  pointer-events: auto;
+}
+.social-icons:hover {
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  color: var(--accentColor);
+}
+.social-icons span {
+  width: 44px;
+  height: 44px;
+  position: relative;
+  display: flex;
+}
+.social-icons a {
+  --siLeft: 50%;
+  --siTop: 50%;
+  position: absolute;
+  left: var(--siLeft, 50%);
+  top: var(--siTop, 50%);
+  transform: translate(-50%, -50%);
+  display: flex;
+  font-size: 22px;
+  color: var(--textSecondary);
+  will-change: left, top;
+  transition: color 0.3s ease, transform 0.3s ease-out;
+}
+.resume-button {
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  bottom: 24px;
+  right: 0;
+  width: auto;
+  text-wrap: nowrap;
+  letter-spacing: 3px;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 600;
+  color: var(--textSecondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+.resume-button:hover {
+  color: var(--accentSecondary);
+}
+.resume-button span {
+  color: inherit;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 900px) {
+  .social-icons {
+    display: flex;
+    gap: 16px;
+  }
+  .social-icons a {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .resume-button {
+    font-size: 16px;
+    line-height: 16px;
+    bottom: 28px;
+  }
+  .resume-button span {
+    font-size: 20px;
+  }
+}

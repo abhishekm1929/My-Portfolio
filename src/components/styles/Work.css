@@ -1,0 +1,222 @@
+.work-section {
+  transition: 0s;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--backgroundColor);
+  z-index: 10;
+}
+
+.work-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-height: 100vh;
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  box-sizing: border-box;
+  position: relative;
+  padding: 30px 0;
+}
+
+.work-section h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 56px;
+  font-weight: 800;
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.work-section h2 > span {
+  background: var(--accentGradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.work-flex {
+  width: 100%;
+  display: flex;
+  height: auto;
+  position: relative;
+  align-items: center;
+}
+
+.work-box {
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  max-height: calc(100vh - 170px);
+  box-sizing: border-box;
+  background: var(--cardBg);
+  border: 1px solid var(--cardBorder);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  margin-right: 32px;
+  flex-shrink: 0;
+  gap: 20px;
+  justify-content: space-between;
+  transition: all 0.35s ease;
+}
+
+.work-box:hover {
+  background: var(--cardBgHover);
+  border-color: var(--cardBorderHover);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px 0 rgba(168, 85, 247, 0.2);
+}
+
+.work-title {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.work-title > div {
+  text-align: right;
+}
+
+.work-title h3 {
+  font-size: 48px;
+  line-height: 44px;
+  margin: 0;
+  font-weight: 800;
+  background: var(--accentGradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.work-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--textPrimary);
+}
+
+.work-info p {
+  font-weight: 300;
+  color: var(--textSecondary);
+  margin: 0;
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+.work-image {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.work-image-in {
+  position: relative;
+  width: 100%;
+}
+
+.work-link {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(168, 85, 247, 0.85);
+  backdrop-filter: blur(8px);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+.work-box:hover .work-link {
+  transform: scale(1.1) rotate(45deg);
+  background: var(--accentSecondary);
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.6);
+}
+
+.work-image a:hover {
+  color: inherit;
+}
+
+.work-image a:hover .work-link {
+  opacity: 1;
+}
+
+.work-image video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  object-fit: cover;
+}
+
+.work-image img {
+  max-width: 100%;
+  max-height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .work-section h2 {
+    font-size: 46px;
+    margin-bottom: 20px;
+  }
+  .work-box {
+    width: 400px;
+    padding: 28px 32px;
+  }
+  .work-title h3 {
+    font-size: 38px;
+  }
+  .work-image img {
+    max-height: 180px;
+  }
+}
+
+@media only screen and (max-height: 750px) {
+  .work-section h2 {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+  .work-box {
+    padding: 24px 28px;
+    gap: 14px;
+  }
+  .work-image img {
+    max-height: 160px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .work-container {
+    align-content: normal;
+  }
+  .work-box {
+    width: 340px;
+    padding: 24px;
+  }
+}
