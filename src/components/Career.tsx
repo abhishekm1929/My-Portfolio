@@ -1,12 +1,13 @@
 import "./styles/Career.css";
+import { SiOracle, SiLeetcode, SiHackerrank, SiGooglecloud } from "react-icons/si";
 
 const Career = () => {
   return (
     <div className="career-section section-container">
       <div className="career-container">
         <h2>
-          My career <span>&</span>
-          <br /> experience
+          Experience <span>&</span>
+          <br /> Milestones
         </h2>
         <div className="career-info">
           <div className="career-timeline">
@@ -59,6 +60,50 @@ const Career = () => {
             <p>
               Led AR/VR front-end application development using WebXR, coordinated team workflows, and delivered the final project demo.
             </p>
+          </div>
+        </div>
+
+        <div className="career-achievements">
+          <h3>
+            Recognitions <span>&</span> Certifications
+          </h3>
+          <div className="achievements-grid">
+            <div className="achievement-card">
+              <div className="achievement-icon oracle">
+                <SiOracle />
+              </div>
+              <div className="achievement-details">
+                <h4>Oracle Certified</h4>
+                <p>Agentic AI Foundations Associate</p>
+              </div>
+            </div>
+            <div className="achievement-card">
+              <div className="achievement-icon leetcode">
+                <SiLeetcode />
+              </div>
+              <div className="achievement-details">
+                <h4>420+ Problems Solved</h4>
+                <p>Data Structures & Algorithms on LeetCode</p>
+              </div>
+            </div>
+            <div className="achievement-card">
+              <div className="achievement-icon hackerrank">
+                <SiHackerrank />
+              </div>
+              <div className="achievement-details">
+                <h4>5★ C++ Programmer</h4>
+                <p>HackerRank Competitive Programming</p>
+              </div>
+            </div>
+            <div className="achievement-card">
+              <div className="achievement-icon googlecloud">
+                <SiGooglecloud />
+              </div>
+              <div className="achievement-details">
+                <h4>Google Cloud Certified</h4>
+                <p>Introduction to Generative AI</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

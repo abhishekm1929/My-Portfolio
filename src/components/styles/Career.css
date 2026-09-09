@@ -148,6 +148,120 @@
   box-shadow: 0px 0px 10px 3px var(--accentColor), 0px 0px 20px 8px var(--accentSecondary);
 }
 
+.career-achievements {
+  margin-top: 70px;
+  width: 100%;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.career-achievements h3 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+  background: var(--accentGradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.career-achievements h3 > span {
+  font-family: "Geist", sans-serif;
+  font-weight: 300;
+  -webkit-text-fill-color: var(--accentSecondary);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.achievement-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 20px;
+  background: var(--cardBg);
+  border: 1px solid var(--cardBorder);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  transition: all 0.35s ease;
+  box-sizing: border-box;
+}
+
+.achievement-card:hover {
+  background: var(--cardBgHover);
+  border-color: var(--cardBorderHover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(168, 85, 247, 0.18);
+}
+
+.achievement-icon {
+  font-size: 28px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.achievement-icon.oracle {
+  color: #ea580c;
+  background: rgba(234, 88, 12, 0.1);
+  border-color: rgba(234, 88, 12, 0.25);
+}
+
+.achievement-icon.leetcode {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+.achievement-icon.hackerrank {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.achievement-icon.googlecloud {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+.achievement-card:hover .achievement-icon {
+  transform: scale(1.08);
+}
+
+.achievement-details h4 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: var(--textPrimary);
+}
+
+.achievement-details p {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 300;
+  color: var(--textSecondary);
+  margin: 0;
+}
+
 @media only screen and (max-width: 1200px) {
   .career-section h2 {
     font-size: 52px;
@@ -169,6 +283,16 @@
   }
   .career-section h2 {
     font-size: 42px;
+  }
+  .career-achievements {
+    margin-top: 50px;
+  }
+  .career-achievements h3 {
+    font-size: 26px;
+  }
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
   .career-info {
     padding-left: 32px;
@@ -205,5 +329,8 @@
   .career-info h4 {
     font-size: 18px;
     line-height: 24px;
+  }
+  .achievements-grid {
+    grid-template-columns: 1fr;
   }
 }

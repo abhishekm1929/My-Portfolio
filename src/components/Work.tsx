@@ -8,23 +8,20 @@ gsap.registerPlugin(useGSAP);
 
 const Work = () => {
   useGSAP(() => {
-    let translateX = 0;
-
-    function setTranslateX() {
+    function getTranslateX() {
       const workFlex = document.querySelector(".work-flex") as HTMLElement | null;
       const workContainer = document.querySelector(".work-container") as HTMLElement | null;
       if (workFlex && workContainer) {
-        translateX = Math.max(0, workFlex.scrollWidth - workContainer.clientWidth + 120);
+        return Math.max(0, workFlex.scrollWidth - workContainer.clientWidth + 140);
       }
+      return 0;
     }
-
-    setTranslateX();
 
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".work-section",
         start: "top top",
-        end: () => `+=${translateX + 350}`,
+        end: () => `+=${getTranslateX() + 400}`,
         scrub: 1,
         pin: true,
         anticipatePin: 1,
@@ -34,7 +31,7 @@ const Work = () => {
     });
 
     timeline.to(".work-flex", {
-      x: () => -translateX,
+      x: () => -getTranslateX(),
       ease: "none",
       duration: 1,
     });
@@ -75,6 +72,13 @@ const Work = () => {
               tools: "WebXR, JavaScript, React.js, 3D Interactive UI",
               img: "/images/walmart-webxr.jpg",
               link: "https://github.com",
+            },
+            {
+              title: "Albert AI Companion",
+              category: "Interactive 3D MERN Assistant",
+              tools: "React.js, Three.js, Node.js, Express, MongoDB, Mistral AI, Tavily",
+              img: "/images/albert-ai.png",
+              link: "https://albert-ai-chatbot-vntr.vercel.app/",
             },
           ].map((project, index) => (
             <div className="work-box" key={index}>

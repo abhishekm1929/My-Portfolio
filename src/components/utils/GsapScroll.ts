@@ -29,9 +29,9 @@ export function setCharTimeline(
   });
   const tl3 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".whatIDO",
-      start: "top top",
-      end: "bottom top",
+      trigger: ".about-section",
+      start: "bottom 70%",
+      end: "bottom 20%",
       scrub: true,
       invalidateOnRefresh: true,
     },
@@ -108,11 +108,11 @@ export function setCharTimeline(
       tl3
         .fromTo(
           ".character-model",
-          { opacity: 1 },
-          { opacity: 0, duration: 3, delay: 1 },
+          { opacity: 1, visibility: "visible" },
+          { opacity: 0, visibility: "hidden", duration: 1 },
           0
         )
-        .to(character.rotation, { x: -0.02, duration: 2, delay: 1 }, 0);
+        .to(character.rotation, { x: -0.02, duration: 1 }, 0);
     }
   }
 }
