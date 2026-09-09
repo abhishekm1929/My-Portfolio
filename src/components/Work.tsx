@@ -71,7 +71,7 @@ const Work = () => {
               category: "AR/VR Spatial Web App",
               tools: "WebXR, JavaScript, React.js, 3D Interactive UI",
               img: "/images/walmart-webxr.jpg",
-              link: "https://github.com",
+              link: "https://amangpt2005.github.io/MindOS",
             },
             {
               title: "Albert AI Companion",
